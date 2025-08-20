@@ -1,0 +1,85 @@
+main {
+    background-color: var(--floral-white);
+    padding: 1.5rem 0;
+}
+
+main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.Hobbies ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.Hobbies li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Hobbies li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.Hobbies li img {
+    width: 100%;
+    max-width: 400px;
+    height: 240px;
+    object-fit: cover;
+    border: 2px solid var(--beige);
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    main .container {
+        padding: 0 1rem;
+    }
+
+    .Hobbies ul {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .Hobbies li img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main .container {
+        padding: 0 0.75rem;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .Hobbies ul {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        justify-items: center;
+        padding: 0;
+    }
+
+    .Hobbies li img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .Hobbies li:last-child {
+        justify-self: center;
+    }
+}

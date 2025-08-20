@@ -1,0 +1,160 @@
+:root {
+    --floral-white: #FFF8F0;
+    --auburn: #9E2B25;
+    --english-violet: #51355A;
+    --russian-violet: #2A0C4E;
+    --beige: #F5F8DE;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--english-violet);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--russian-violet);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--english-violet);
+    color: var(--floral-white);
+    position: relative;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: normal;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--floral-white);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--beige);
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--floral-white);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--russian-violet);
+    color: var(--floral-white);
+    padding: 2rem 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+footer h3 {
+    margin-top: 0;
+    color: var(--beige);
+}
+
+footer a {
+    color: var(--beige);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--auburn);
+}
+
+@media screen and (max-width: 480px) {
+    .menu-btn {
+        display: block;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--english-violet);
+        width: 100%;
+        text-align: right;
+        padding: 1rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-end;
+    }
+
+    header nav.show {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    footer h3 {
+        text-align: left;
+    }
+}

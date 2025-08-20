@@ -1,0 +1,105 @@
+#projects {
+    background-color: var(--floral-white);
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#projects .container {
+    background-color: var(--floral-white);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project-card ul {
+    margin-top: 2rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.project-card ul li {
+    list-style: none;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-card ul li a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--auburn);
+    text-decoration: none;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.project-card ul li a:hover {
+    color: var(--english-violet);
+    text-decoration: underline;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px #00000026;
+    transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+    transform: scale(1.03);
+}
+
+.project-card a.github-btn {
+    display: inline-block;
+    margin: 2rem auto 0;
+    padding: 0.9rem 2rem;
+    background-color: var(--auburn);
+    color: var(--floral-white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px #00000026;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-card a.github-btn:hover {
+    background-color: var(--english-violet);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 480px) {
+    #projects {
+        padding: 1rem 0;
+    }
+
+    #projects .container {
+        padding: 1rem;
+    }
+
+    .project-card ul li {
+        max-width: 100%;
+    }
+
+    .project-card ul li img {
+        width: 150px;
+        height: auto;
+    }
+
+    .project-card a.github-btn {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}
